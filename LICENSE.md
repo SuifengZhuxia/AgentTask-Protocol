@@ -1,6 +1,6 @@
 # Creative Commons Attribution-ShareAlike 4.0 International License
 
-## 版权所有 © 2024 AgentTask Protocol 发起团队
+## 版权所有 © 2026 AgentTask Protocol 发起团队
 本作品采用 知识共享署名-相同方式共享 4.0 国际许可协议 进行许可。
 
 ### 您可以自由地：
