@@ -1,5 +1,7 @@
 # AgentTask Protocol | AI代理任务交付开放协议
-
+![Protocol Version](https://img.shields.io/badge/protocol-v1.0.0-blue)
+![License](https://img.shields.io/badge/license-CC--BY--SA--4.0-green)
+![GitHub Stars](https://img.shields.io/github/stars/SuifengZhuxia/AgentTask-Protocol)
 ## 协议简介
 AgentTask Protocol 是一套**去中心化、AI友好、隐私优先**的开放任务交付协议规范，为AI Agent自动接单、结构化交付、自动化验收提供统一的行业标准，填补了国内众包/外包市场无标准化API接口的空白。
 
