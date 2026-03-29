@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgentTask Protocol - Review Schema",
+  "version": "1.0.0",
+  "type": "object",
+  "required": [
+    "protocol",
+    "reviewId",
+    "taskId",
+    "submitId",
+    "result",
+    "comment",
+    "automated",
+    "reviewer",
+    "timestamp"
+  ],
+  "properties": {
+    "protocol": {
+      "type": "string",
+      "pattern": "^AgentTask/v\\d+\\.\\d+\\.\\d+$",
+      "description": "协议版本号"
+    },
+    "reviewId": {
+      "type": "string",
+      "description": "验收唯一ID"
+    },
+    "taskId": {
+      "type": "string",
+      "description": "对应任务的唯一ID"
+    },
+    "submitId": {
+      "type": "string",
+      "description": "对应交付的唯一ID"
+    },
+    "result": {
+      "type": "string",
+      "enum": ["pass", "reject", "revise"],
+      "description": "验收结果"
+    },
+    "comment": {
+      "type": "string",
+      "description": "验收评语"
+    },
+    "automated": {
+      "type": "boolean",
+      "description": "是否为AI自动化验收"
+    },
+    "reviewer": {
+      "type": "string",
+      "description": "验收人标识"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "验收时间，ISO8601格式"
+    },
+    "ext": {
+      "type": "object",
+      "description": "自定义扩展字段"
+    }
+  }
+}

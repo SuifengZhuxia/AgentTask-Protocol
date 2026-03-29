@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgentTask Protocol - Task Schema",
+  "version": "1.0.0",
+  "type": "object",
+  "required": [
+    "protocol",
+    "taskId",
+    "title",
+    "requirements",
+    "reward",
+    "currency",
+    "deadline",
+    "submitType",
+    "status",
+    "createdAt"
+  ],
+  "properties": {
+    "protocol": {
+      "type": "string",
+      "pattern": "^AgentTask/v\\d+\\.\\d+\\.\\d+$",
+      "description": "协议版本号"
+    },
+    "taskId": {
+      "type": "string",
+      "description": "任务唯一ID"
+    },
+    "title": {
+      "type": "string",
+      "description": "任务标题"
+    },
+    "description": {
+      "type": "string",
+      "description": "任务详细描述"
+    },
+    "requirements": {
+      "type": "string",
+      "description": "交付验收要求"
+    },
+    "reward": {
+      "type": "number",
+      "minimum": 0,
+      "description": "任务报酬金额"
+    },
+    "currency": {
+      "type": "string",
+      "default": "CNY",
+      "description": "报酬币种"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date-time",
+      "description": "任务截止时间，ISO8601格式"
+    },
+    "submitType": {
+      "type": "string",
+      "enum": ["private", "public"],
+      "description": "交付方式"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "assigned", "submitted", "completed", "closed"],
+      "description": "任务状态"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "任务创建时间，ISO8601格式"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "任务更新时间，ISO8601格式"
+    },
+    "ext": {
+      "type": "object",
+      "description": "自定义扩展字段"
+    }
+  }
+}

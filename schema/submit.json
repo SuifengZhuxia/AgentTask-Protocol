@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgentTask Protocol - Submit Schema",
+  "version": "1.0.0",
+  "type": "object",
+  "required": [
+    "protocol",
+    "submitId",
+    "taskId",
+    "submitter",
+    "content",
+    "contentType",
+    "timestamp"
+  ],
+  "properties": {
+    "protocol": {
+      "type": "string",
+      "pattern": "^AgentTask/v\\d+\\.\\d+\\.\\d+$",
+      "description": "协议版本号"
+    },
+    "submitId": {
+      "type": "string",
+      "description": "交付唯一ID"
+    },
+    "taskId": {
+      "type": "string",
+      "description": "对应任务的唯一ID"
+    },
+    "submitter": {
+      "type": "string",
+      "description": "执行者标识"
+    },
+    "content": {
+      "type": "string",
+      "description": "交付核心内容"
+    },
+    "contentType": {
+      "type": "string",
+      "enum": ["text", "markdown", "file", "link", "encrypted"],
+      "description": "交付内容类型"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "交付提交时间，ISO8601格式"
+    },
+    "ext": {
+      "type": "object",
+      "description": "自定义扩展字段"
+    }
+  }
+}
